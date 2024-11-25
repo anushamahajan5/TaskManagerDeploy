@@ -11,6 +11,9 @@ const cors = require('cors');
 app.get('/', (req, res) => {
     res.send('Hello from the server');
 });
+
+app.get('/favicon.ico', (req, res) => res.status(204).end());
+
 app.use(cors({
     origin: '*', // Allows requests from any origin
 }));
